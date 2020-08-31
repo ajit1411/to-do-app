@@ -12,8 +12,8 @@ const Users = require('./APIs/Routes/User')
 const Buckets = require('./APIs/Routes/Buckets')
 
 app.use((req, res, next) => {
-    req.header('Access-Control-Allow-Origin', '*')
-    req.header('Access-Control-Allow-Header', '*')
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Authorization')
     if (req.method == 'OPTIONS') {
         res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH')
         res.status(StatusCodes.OK).json({})

@@ -5,6 +5,7 @@ const StatusCode = require('./../../../../Utilities/Constants').StatusCodes
 const UserVerification = require('./../../../../Utilities/Middleware/UserVerification')
 const Constants = require('../../../../Utilities/Constants')
 const { getUserDataFromToken } = require('../../../../Utilities/User')
+const { Db } = require('mongodb')
 
 
 // Fetch my buckets
@@ -34,6 +35,36 @@ router.get('/my-buckets', UserVerification, (req, res, next) => {
     })
 })
 
+// Get all the tasks for the selected bucket
+router.get('/:bucketId', UserVerification, (req, res, next) => {
+    getUserDataFromToken(req.headers.authorization, (userData) => {
+        if (userData) {
+            const bucketId = req.params.bucketId
+            if (bucketId) {
+                DbOps.read(Constants.databases.testing, 'tasks', { 'parent.bucketId': bucketId, 'user.userId': userData['userId'] })
+                    .then(result => {
+                        res.status(Constants.StatusCodes.OK).json({
+                            'status': 'success',
+                            'myTasks': result['documents']
+                        })
+                    })
+            }
+            else {
+                res.status(Constants.StatusCodes.badRequest).json({
+                    'status': Constants.ResponseMessage.failed,
+                    'error': Constants.ResponseMessage.failedToProceed
+                })
+            }
+        }
+        else{
+            res.status(Constants.StatusCodes.unAuthorized).json({
+                'status': Constants.ResponseMessage.failed,
+                'message': Constants.ResponseMessage.unAuthorized
+            })
+        }
+    })
+})
+
 // Create new task
 router.post('/new', UserVerification, (req, res, next) => {
     getUserDataFromToken(req.headers.authorization, (userData) => {
@@ -49,9 +80,7 @@ router.post('/new', UserVerification, (req, res, next) => {
                         res.status(Constants.StatusCodes.created).json({
                             'status': 'success',
                             'message': 'bucket created',
-                            'data': {
-                                'bucketId': bucketId
-                            }
+                            'bucketData': bucketDetails
                         })
                     })
                     .catch(error => {

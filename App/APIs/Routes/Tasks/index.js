@@ -13,8 +13,36 @@ router.get('/my-tasks', UserVerification, (req, res, next) => {
             Promise.all([DbOps.read(Constants.databases.testing, 'tasks', { 'user.userId': userData['userId'] }), DbOps.read(Constants.databases.testing, 'buckets', { 'user.userId': userData['userId'] })])
                 .then(result => {
                     let responseBody = {
-                        'myTaks': result[0]['documents'],
+                        'myTasks': result[0]['documents'],
                         'myBuckets': result[1]['documents']
+                    }
+                    res.status(200).json(responseBody)
+                })
+                .catch(error => {
+                    res.status(501).json({
+                        'error': error
+                    })
+                })
+        }
+        else {
+            res.status(Constants.StatusCodes.unAuthorized).json({
+                'status': Constants.ResponseMessage.failed,
+                'message': Constants.ResponseMessage.unAuthorized
+            })
+        }
+    })
+})
+
+// get tasks
+router.get('/', UserVerification, (req, res, next) => {
+    getUserDataFromToken(req.headers.authorization, (userData) => {
+        if (userData) {
+            const taskType = req.query.type
+            let query = { 'user.userId': userData['userId'], '$or': [{ 'status': taskType }, { 'type': taskType }] }
+            DbOps.read(Constants.databases.testing, 'tasks', query)
+                .then(result => {
+                    let responseBody = {
+                        'myTasks': result['documents']
                     }
                     res.status(200).json(responseBody)
                 })
@@ -46,7 +74,8 @@ router.post('/new', UserVerification, (req, res, next) => {
                     .then(result => {
                         res.status(Constants.StatusCodes.created).json({
                             'status': 'success',
-                            'message': 'task created'
+                            'message': 'task created',
+                            'data': taskDetails
                         })
                     })
                     .catch(error => {
