@@ -1,0 +1,83 @@
+[{
+  "_id": {
+    "$oid": "5f4bfc2afcb0042d943ff2de"
+  },
+  "name": "One important taskk",
+  "description": "very important",
+  "parent": [],
+  "status": "incomplete",
+  "createdOn": "2020-08-30T19:21:14.325Z",
+  "type": "important",
+  "user": {
+    "name": "Ajit Jadhav 2",
+    "email": "ajitjadhav2@jadhav.com",
+    "contact": "+918698878776",
+    "userId": "user-mdeiy4a9hod-v379j9pa1k-uiuv5h6ltyg"
+  },
+  "taskId": "task-qhyvnqvtou-x88ioofdprk-wa15ptqyhe",
+  "isEditable": false
+},{
+  "_id": {
+    "$oid": "5f4ce32fbe2a912bc86f62cd"
+  },
+  "name": "New private task for Ajit",
+  "description": "",
+  "parent": [
+    {
+      "bucketId": "bucket-2qh002zxf4z-pf17mvflw2-klb9u94re6"
+    }
+  ],
+  "status": "incomplete",
+  "createdOn": "2020-08-31T11:46:55.487Z",
+  "type": "general",
+  "user": {
+    "name": "Ajit Jadhav 2",
+    "email": "ajitjadhav2@jadhav.com",
+    "contact": "+918698878776",
+    "userId": "user-mdeiy4a9hod-v379j9pa1k-uiuv5h6ltyg"
+  },
+  "taskId": "task-k8zwbebcw8d-azrlz42cdiu-o7gh4bwbwq",
+  "isEditable": false
+},{
+  "_id": {
+    "$oid": "5f4d2013bdddf8415c13e243"
+  },
+  "name": "My private task 2",
+  "parent": [
+    {
+      "bucketId": "bucket-2qh002zxf4z-pf17mvflw2-klb9u94re6"
+    }
+  ],
+  "status": "incomplete",
+  "createdOn": "2020-08-31T16:06:41.160Z",
+  "type": "general",
+  "user": {
+    "name": "Ajit Jadhav 2",
+    "email": "ajitjadhav2@jadhav.com",
+    "contact": "+918698878776",
+    "userId": "user-mdeiy4a9hod-v379j9pa1k-uiuv5h6ltyg"
+  },
+  "taskId": "task-u7r6p3dvgji-y18iltp1sf-l3rbatjrgr",
+  "isEditable": false
+},{
+  "_id": {
+    "$oid": "5f4d4718c725e007e85631d0"
+  },
+  "name": "new private",
+  "parent": [
+    {
+      "bucketId": "bucket-2qh002zxf4z-pf17mvflw2-klb9u94re6"
+    }
+  ],
+  "status": "incomplete",
+  "createdOn": "2020-08-31T18:53:12.618Z",
+  "type": "general",
+  "user": {
+    "name": "Ajit Jadhav 2",
+    "email": "ajitjadhav2@jadhav.com",
+    "contact": "+918698878776",
+    "userId": "user-mdeiy4a9hod-v379j9pa1k-uiuv5h6ltyg"
+  },
+  "taskId": "task-27w7iaxlrvw-t978lnt09l-utpz45iabl",
+  "isEditable": false
+}]

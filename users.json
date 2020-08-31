@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "5f491dc0ac86441df85d0217"
+  },
+  "name": "Ajit Jadhav 1",
+  "email": "ajitjadhav1@jadhav.com",
+  "contact": "+918446460616",
+  "password": "$2b$10$1W0cOfHJ1S04q.AbimCOWOH9gBY.lBfK.BceqP/elFNd9dLdpL0Vu",
+  "userId": "user-pfks6go8qda-byxp24ath97-kmjwwfyrhnb"
+},{
+  "_id": {
+    "$oid": "5f491e195c9a401da496bbe9"
+  },
+  "name": "Ajit Jadhav 2",
+  "email": "ajitjadhav2@jadhav.com",
+  "contact": "+918698878776",
+  "password": "$2b$10$6RCIvXoZbEO9DMUD3Q6efetRlJgZwss8Azudc/tbq5reM3luVEHNO",
+  "userId": "user-mdeiy4a9hod-v379j9pa1k-uiuv5h6ltyg"
+},{
+  "_id": {
+    "$oid": "5f491e2d5c9a401da496bbea"
+  },
+  "name": "Ajit Jadhav 3",
+  "email": "ajitjadhav3@jadhav.com",
+  "contact": "+918698878776",
+  "password": "$2b$10$f3AVm3eEcrffFRj6hZP/.O2nMUiMIx5cXw3osmwE76xAXW.YjRUMC",
+  "userId": "user-ygkqruuu28-6w19dros2y3-m2v9jui72x"
+}]

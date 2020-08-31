@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "5f494462d0652e078ca4123f"
+  },
+  "name": "My Personal List",
+  "type": "private",
+  "user": {
+    "name": "Ajit Jadhav 1",
+    "email": "ajitjadhav1@jadhav.com",
+    "contact": "+918446460616",
+    "userId": "user-pfks6go8qda-byxp24ath97-kmjwwfyrhnb"
+  },
+  "bucketId": "bucket-6zrafkfjgp-vw1wpg4rwfg-84kxghee5u6",
+  "createdOn": "2020-08-28T17:52:34.068Z"
+},{
+  "_id": {
+    "$oid": "5f494472d0652e078ca41240"
+  },
+  "name": "My Public List",
+  "type": "public",
+  "user": {
+    "name": "Ajit Jadhav 1",
+    "email": "ajitjadhav1@jadhav.com",
+    "contact": "+918446460616",
+    "userId": "user-pfks6go8qda-byxp24ath97-kmjwwfyrhnb"
+  },
+  "bucketId": "bucket-54m5ggc56ml-lkpr912a1dl-1nhtpichtrz",
+  "createdOn": "2020-08-28T17:52:50.439Z"
+},{
+  "_id": {
+    "$oid": "5f4948df1943ec34f4adddb6"
+  },
+  "name": "My Public List",
+  "type": "public",
+  "user": {
+    "name": "Ajit Jadhav 1",
+    "email": "ajitjadhav1@jadhav.com",
+    "contact": "+918446460616",
+    "userId": "user-pfks6go8qda-byxp24ath97-kmjwwfyrhnb"
+  },
+  "bucketId": "bucket-il82v1nkwdm-dpabb2o4hmh-4t69hly8xju",
+  "createdOn": "2020-08-28T18:11:43.576Z"
+},{
+  "_id": {
+    "$oid": "5f49490f1943ec34f4adddb7"
+  },
+  "name": "My Private List",
+  "type": "private",
+  "user": {
+    "name": "Ajit Jadhav 2",
+    "email": "ajitjadhav2@jadhav.com",
+    "contact": "+918698878776",
+    "userId": "user-mdeiy4a9hod-v379j9pa1k-uiuv5h6ltyg"
+  },
+  "bucketId": "bucket-2qh002zxf4z-pf17mvflw2-klb9u94re6",
+  "createdOn": "2020-08-28T18:12:31.501Z"
+},{
+  "_id": {
+    "$oid": "5f4bd4d9b6070b335cd8a17f"
+  },
+  "name": "test",
+  "user": {
+    "name": "Ajit Jadhav 2",
+    "email": "ajitjadhav2@jadhav.com",
+    "contact": "+918698878776",
+    "userId": "user-mdeiy4a9hod-v379j9pa1k-uiuv5h6ltyg"
+  },
+  "bucketId": "bucket-p58e8qqdcs7-enj8vu9xsz4-rak7993aww",
+  "createdOn": "2020-08-30T16:33:29.463Z"
+}]
